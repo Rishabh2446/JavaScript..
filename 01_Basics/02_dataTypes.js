@@ -69,3 +69,28 @@ const myFunc = function(){
 }
 
 console.log(typeof bigNumber);
+
+// ******* Memory *******
+
+// stack(primitive), Heap(non-Primitive)
+
+//stack gives copy
+// Heap provide reference
+
+// stack -> gives copy(not change in actual memory)
+let myYoutubename = 'rgsketches'
+let anotherName = myYoutubename;
+anotherName = "danceWithme"
+console.log(anotherName);
+console.log(myYoutubename); // no change 
+
+
+// heap (object)-> give reference(changes on any change in original memory)
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "rishu@gmail.com"
+console.log(userOne.email) // changes email due to references
+console.log(userTwo.email)
